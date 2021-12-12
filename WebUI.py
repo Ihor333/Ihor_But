@@ -5,6 +5,7 @@ import pytest
 from behave import *
 
 class MainFunctions:
+
     def __init__(self):
         self.driver = webdriver.Chrome()
         self.driver.get('https://opensource-demo.orangehrmlive.com/')
@@ -81,5 +82,6 @@ test = Testing()
 test.enter()
 test.add_user()
 test.delete_user()
+test.driver.close()
 
 
