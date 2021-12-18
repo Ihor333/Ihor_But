@@ -28,7 +28,7 @@ class Test:
             'Authorization': 'Bearer 5ihZn_j5xxUAAAAAAAAAAb8I12_nNV6oEH5BJJIk4XSzaBBpRxaxTZ_JsgfAFJUM'
         }
         self.url2.request("POST", "/2/files/get_metadata", payload, headers)
-        assert self.url2.getresponse().status == 200 "test with file metadata failed"
+        assert self.url2.getresponse().status == 200, "test with file metadata failed"
 
     def test_delete_file(self):
         payload = json.dumps({
